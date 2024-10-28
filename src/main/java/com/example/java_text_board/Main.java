@@ -7,13 +7,18 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("==[텍스트게시판]");
         System.out.println("==게시판을 시작합니다.");
-        System.out.print("명령어)");
+        while (true){
+            System.out.print("명령어)");
+            String cmd = sc.nextLine();
 
-        String cmd = sc.nextLine();
-        System.out.println(String.format("입력받은 명령어: %s", cmd));
-
+            if (cmd.equals("exit")){
+                System.out.println("==게시판을 종료합니다.");
+                break;
+            }
+            else {
+                System.out.println(String.format("입력받은 명령어: %s", cmd));
+            }
+        }
         sc.close();
-
-        System.out.println("==게시판을 종료합니다.");
     }
 }
